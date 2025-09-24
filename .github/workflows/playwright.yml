@@ -17,7 +17,7 @@ jobs:
         run: docker build -t playwright-tests .
         
       - name: Update Playwright snapshots
-        run: docker run --rm playwright-tests npx playwright test --update-snapshots
+        run: docker run playwright-tests npx playwright test --update-snapshots
 
       - name: Run Playwright tests in Docker
         run: docker run --rm playwright-tests
