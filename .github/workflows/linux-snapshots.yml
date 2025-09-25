@@ -1,3 +1,6 @@
+name: Linux Snapshots Visual Tests
+on:
+  workflow_dispatch: # se dispara manualmente para actualizar snapshots
 jobs:
   update-snapshots:
     runs-on: ubuntu-latest
