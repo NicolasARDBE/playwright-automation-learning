@@ -3,7 +3,7 @@ import {loadHomePage, assertTitle} from '../helpers'
 
 //To show browser execution: npx playwright test --headed
 
-test.skip("Selector Test", async({ page }) => {
+test("Selector Test", async({ page }) => {
     //text
     await page.click("text=some text")
 
@@ -51,7 +51,7 @@ test("Assertions @tagExample", async ({ page }) => { //Putting a tag is done wit
 //To run this tagged test, in terminal: npx playwright test --grep @tagExample
 //To NOT run these tests: npx playwright test --grep-invert @tagExample
 
-test.describe.skip("First test suite", () => { //Test Suite to organize tests
+test.describe("First test suite", () => { //Test Suite to organize tests
     test("Simple Basic Test", async ({ page }) => {
     await page.goto('https://example.com')
     const pageTitle = await page.locator('h1')
@@ -75,7 +75,7 @@ test("Screenshots", async ({ page })=>{
     await title.screenshot({path: 'locator-screenshot.png', })
 })
 
-test.describe.parallel.only("Hooks", () => {
+test.describe.parallel("Hooks", () => {
     test.beforeEach(async({page})=>{
         await page.goto('https://example.com')
     })
