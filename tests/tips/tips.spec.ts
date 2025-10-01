@@ -1,9 +1,9 @@
 import { test, expect } from '@playwright/test'
 import { getRandomNumber, generateRandomString } from '../../utils/data-helpers'
 
-test.describe.only('Tips and Tricks', () => {
+test.describe('Tips and Tricks', () => {
 
-    test.only('TestInfo Object', async ({ page }, testInfo) => {
+    test('TestInfo Object', async ({ page }, testInfo) => {
         await page.goto('https://example.com')
         console.log(testInfo)
         let randomNum = await getRandomNumber(1, 1000)

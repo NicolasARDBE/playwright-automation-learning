@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test.describe.skip("Feedback Form", () => {
+test.describe("Feedback Form", () => {
   
   // Before Hook
   test.beforeEach(async ({ page }) => {

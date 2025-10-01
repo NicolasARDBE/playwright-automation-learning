@@ -1,7 +1,7 @@
 import {test, expect} from '@playwright/test';
 import { LoginPage } from "../../page-object/LoginPage";
 
-test.describe.only("Login / Logout Flow", () => {
+test.describe("Login / Logout Flow", () => {
     let loginPage: LoginPage;
     //Befor Hook
     test.beforeEach(async ({page}) => {

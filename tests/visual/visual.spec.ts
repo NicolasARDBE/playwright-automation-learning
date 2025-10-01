@@ -8,7 +8,7 @@ test.describe('Visual Regression Tests', () => {
         });
     });
 
-    test.only('Element snapshot', async ({ page }) => {
+    test('Element snapshot', async ({ page }) => {
         await page.goto('https://www.example.com');
         const element = await page.$('h1'); //En este caso no se espera a que el elemento exista para la continuidad del test. Puede ser null
         expect(await element?.screenshot()).toMatchSnapshot('example-com-h1.png', {
