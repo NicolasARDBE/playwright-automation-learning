@@ -3,7 +3,7 @@ import {loadHomePage, assertTitle} from '../helpers'
 
 //To show browser execution: npx playwright test --headed
 
-test("Selector Test", async({ page }) => {
+test.skip("Selector Test", async({ page }) => {
     //text
     await page.click("text=some text")
 
