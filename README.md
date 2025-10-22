@@ -45,7 +45,7 @@ This repository includes two CI workflows powered by **GitHub Actions** and **Do
 
 - **Purpose**: Runs the full Playwright test suite.  
 - **Triggers**:
-  - On every **push to `develop`**.    
+  - On every **closed pull request to `main`**.    
   - Can also be launched **manually**.  
 - **How it works**:
   1. Builds the same Docker image (shared with the snapshots workflow).  
